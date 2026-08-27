@@ -33,7 +33,7 @@
             this.rbLarge = new System.Windows.Forms.RadioButton();
             this.rbMedium = new System.Windows.Forms.RadioButton();
             this.rbSmall = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gpCrustType = new System.Windows.Forms.GroupBox();
             this.rbThinkCurst = new System.Windows.Forms.RadioButton();
             this.rbThinCurst = new System.Windows.Forms.RadioButton();
             this.gpToppings = new System.Windows.Forms.GroupBox();
@@ -43,7 +43,7 @@
             this.chTomatoes = new System.Windows.Forms.CheckBox();
             this.chMashrooms = new System.Windows.Forms.CheckBox();
             this.chExtraChess = new System.Windows.Forms.CheckBox();
-            this.gbWhereToEat = new System.Windows.Forms.GroupBox();
+            this.gpWhereToEat = new System.Windows.Forms.GroupBox();
             this.rbTakeOut = new System.Windows.Forms.RadioButton();
             this.rbEatIn = new System.Windows.Forms.RadioButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -51,25 +51,19 @@
             this.btnResetForm = new System.Windows.Forms.Button();
             this.gpSummary = new System.Windows.Forms.GroupBox();
             this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.lbldollarLogo = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblCrustType = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblWhereToEat = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblOnion = new System.Windows.Forms.Label();
-            this.lblExtraChess = new System.Windows.Forms.Label();
-            this.lblMashrooms = new System.Windows.Forms.Label();
-            this.lblGreenPeppers = new System.Windows.Forms.Label();
-            this.lblTomatoes = new System.Windows.Forms.Label();
-            this.lblOlives = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblToppings = new System.Windows.Forms.Label();
             this.gpSize.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gpCrustType.SuspendLayout();
             this.gpToppings.SuspendLayout();
-            this.gbWhereToEat.SuspendLayout();
+            this.gpWhereToEat.SuspendLayout();
             this.gpSummary.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,17 +130,17 @@
             this.rbSmall.UseVisualStyleBackColor = true;
             this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSmall_CheckedChanged);
             // 
-            // groupBox1
+            // gpCrustType
             // 
-            this.groupBox1.Controls.Add(this.rbThinkCurst);
-            this.groupBox1.Controls.Add(this.rbThinCurst);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.groupBox1.Location = new System.Drawing.Point(48, 462);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(333, 144);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Curst Type";
+            this.gpCrustType.Controls.Add(this.rbThinkCurst);
+            this.gpCrustType.Controls.Add(this.rbThinCurst);
+            this.gpCrustType.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.gpCrustType.Location = new System.Drawing.Point(48, 462);
+            this.gpCrustType.Name = "gpCrustType";
+            this.gpCrustType.Size = new System.Drawing.Size(333, 144);
+            this.gpCrustType.TabIndex = 2;
+            this.gpCrustType.TabStop = false;
+            this.gpCrustType.Text = "Curst Type";
             // 
             // rbThinkCurst
             // 
@@ -262,17 +256,17 @@
             this.chExtraChess.UseVisualStyleBackColor = true;
             this.chExtraChess.CheckedChanged += new System.EventHandler(this.chExtraChess_CheckedChanged);
             // 
-            // gbWhereToEat
+            // gpWhereToEat
             // 
-            this.gbWhereToEat.Controls.Add(this.rbTakeOut);
-            this.gbWhereToEat.Controls.Add(this.rbEatIn);
-            this.gbWhereToEat.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.gbWhereToEat.Location = new System.Drawing.Point(450, 413);
-            this.gbWhereToEat.Name = "gbWhereToEat";
-            this.gbWhereToEat.Size = new System.Drawing.Size(383, 144);
-            this.gbWhereToEat.TabIndex = 4;
-            this.gbWhereToEat.TabStop = false;
-            this.gbWhereToEat.Text = "Where To Eat";
+            this.gpWhereToEat.Controls.Add(this.rbTakeOut);
+            this.gpWhereToEat.Controls.Add(this.rbEatIn);
+            this.gpWhereToEat.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.gpWhereToEat.Location = new System.Drawing.Point(450, 413);
+            this.gpWhereToEat.Name = "gpWhereToEat";
+            this.gpWhereToEat.Size = new System.Drawing.Size(383, 144);
+            this.gpWhereToEat.TabIndex = 4;
+            this.gpWhereToEat.TabStop = false;
+            this.gpWhereToEat.Text = "Where To Eat";
             // 
             // rbTakeOut
             // 
@@ -322,26 +316,20 @@
             // 
             // gpSummary
             // 
+            this.gpSummary.Controls.Add(this.lblToppings);
             this.gpSummary.Controls.Add(this.lblTotalPrice);
-            this.gpSummary.Controls.Add(this.lbldollarLogo);
             this.gpSummary.Controls.Add(this.label11);
             this.gpSummary.Controls.Add(this.lblCrustType);
             this.gpSummary.Controls.Add(this.label12);
             this.gpSummary.Controls.Add(this.lblWhereToEat);
             this.gpSummary.Controls.Add(this.label10);
-            this.gpSummary.Controls.Add(this.lblOnion);
-            this.gpSummary.Controls.Add(this.lblExtraChess);
-            this.gpSummary.Controls.Add(this.lblMashrooms);
-            this.gpSummary.Controls.Add(this.lblGreenPeppers);
-            this.gpSummary.Controls.Add(this.lblTomatoes);
-            this.gpSummary.Controls.Add(this.lblOlives);
             this.gpSummary.Controls.Add(this.label3);
             this.gpSummary.Controls.Add(this.lblSize);
             this.gpSummary.Controls.Add(this.label2);
             this.gpSummary.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.gpSummary.Location = new System.Drawing.Point(879, 151);
+            this.gpSummary.Location = new System.Drawing.Point(881, 154);
             this.gpSummary.Name = "gpSummary";
-            this.gpSummary.Size = new System.Drawing.Size(617, 544);
+            this.gpSummary.Size = new System.Drawing.Size(508, 544);
             this.gpSummary.TabIndex = 7;
             this.gpSummary.TabStop = false;
             this.gpSummary.Text = "Order Summary";
@@ -351,23 +339,12 @@
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.BackColor = System.Drawing.Color.Green;
             this.lblTotalPrice.Font = new System.Drawing.Font("Tahoma", 67.25F);
-            this.lblTotalPrice.Location = new System.Drawing.Point(279, 415);
+            this.lblTotalPrice.Location = new System.Drawing.Point(220, 402);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(96, 109);
             this.lblTotalPrice.TabIndex = 14;
             this.lblTotalPrice.Tag = "0";
             this.lblTotalPrice.Text = "0";
-            // 
-            // lbldollarLogo
-            // 
-            this.lbldollarLogo.AutoSize = true;
-            this.lbldollarLogo.BackColor = System.Drawing.Color.Green;
-            this.lbldollarLogo.Font = new System.Drawing.Font("Tahoma", 67.25F);
-            this.lbldollarLogo.Location = new System.Drawing.Point(213, 415);
-            this.lbldollarLogo.Name = "lbldollarLogo";
-            this.lbldollarLogo.Size = new System.Drawing.Size(96, 109);
-            this.lbldollarLogo.TabIndex = 15;
-            this.lbldollarLogo.Text = "$";
             // 
             // label11
             // 
@@ -419,72 +396,6 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Curst Type : ";
             // 
-            // lblOnion
-            // 
-            this.lblOnion.AutoSize = true;
-            this.lblOnion.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOnion.Location = new System.Drawing.Point(251, 167);
-            this.lblOnion.Name = "lblOnion";
-            this.lblOnion.Size = new System.Drawing.Size(65, 23);
-            this.lblOnion.TabIndex = 8;
-            this.lblOnion.Text = "Onion,";
-            this.lblOnion.Visible = false;
-            // 
-            // lblExtraChess
-            // 
-            this.lblExtraChess.AutoSize = true;
-            this.lblExtraChess.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.lblExtraChess.Location = new System.Drawing.Point(142, 167);
-            this.lblExtraChess.Name = "lblExtraChess";
-            this.lblExtraChess.Size = new System.Drawing.Size(113, 23);
-            this.lblExtraChess.TabIndex = 7;
-            this.lblExtraChess.Text = "Extra Chess,";
-            this.lblExtraChess.Visible = false;
-            // 
-            // lblMashrooms
-            // 
-            this.lblMashrooms.AutoSize = true;
-            this.lblMashrooms.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMashrooms.Location = new System.Drawing.Point(311, 165);
-            this.lblMashrooms.Name = "lblMashrooms";
-            this.lblMashrooms.Size = new System.Drawing.Size(111, 23);
-            this.lblMashrooms.TabIndex = 6;
-            this.lblMashrooms.Text = "Mashrooms,";
-            this.lblMashrooms.Visible = false;
-            // 
-            // lblGreenPeppers
-            // 
-            this.lblGreenPeppers.AutoSize = true;
-            this.lblGreenPeppers.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreenPeppers.Location = new System.Drawing.Point(275, 199);
-            this.lblGreenPeppers.Name = "lblGreenPeppers";
-            this.lblGreenPeppers.Size = new System.Drawing.Size(134, 23);
-            this.lblGreenPeppers.TabIndex = 5;
-            this.lblGreenPeppers.Text = "Green Peppers";
-            this.lblGreenPeppers.Visible = false;
-            // 
-            // lblTomatoes
-            // 
-            this.lblTomatoes.AutoSize = true;
-            this.lblTomatoes.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTomatoes.Location = new System.Drawing.Point(184, 199);
-            this.lblTomatoes.Name = "lblTomatoes";
-            this.lblTomatoes.Size = new System.Drawing.Size(97, 23);
-            this.lblTomatoes.TabIndex = 4;
-            this.lblTomatoes.Text = "Tomatoes,";
-            this.lblTomatoes.Visible = false;
-            // 
-            // lblOlives
-            // 
-            this.lblOlives.AutoSize = true;
-            this.lblOlives.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOlives.Location = new System.Drawing.Point(419, 163);
-            this.lblOlives.Name = "lblOlives";
-            this.lblOlives.Size = new System.Drawing.Size(58, 23);
-            this.lblOlives.TabIndex = 3;
-            this.lblOlives.Text = "Olives";
-            this.lblOlives.Visible = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -515,29 +426,38 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Size : ";
             // 
+            // lblToppings
+            // 
+            this.lblToppings.Location = new System.Drawing.Point(146, 160);
+            this.lblToppings.Name = "lblToppings";
+            this.lblToppings.Size = new System.Drawing.Size(342, 59);
+            this.lblToppings.TabIndex = 15;
+            this.lblToppings.Text = "No Toppings";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1574, 707);
+            this.ClientSize = new System.Drawing.Size(1392, 707);
             this.Controls.Add(this.gpSummary);
             this.Controls.Add(this.btnResetForm);
             this.Controls.Add(this.btnOrderPizza);
-            this.Controls.Add(this.gbWhereToEat);
+            this.Controls.Add(this.gpWhereToEat);
             this.Controls.Add(this.gpToppings);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpCrustType);
             this.Controls.Add(this.gpSize);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gpSize.ResumeLayout(false);
             this.gpSize.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gpCrustType.ResumeLayout(false);
+            this.gpCrustType.PerformLayout();
             this.gpToppings.ResumeLayout(false);
             this.gpToppings.PerformLayout();
-            this.gbWhereToEat.ResumeLayout(false);
-            this.gbWhereToEat.PerformLayout();
+            this.gpWhereToEat.ResumeLayout(false);
+            this.gpWhereToEat.PerformLayout();
             this.gpSummary.ResumeLayout(false);
             this.gpSummary.PerformLayout();
             this.ResumeLayout(false);
@@ -552,7 +472,7 @@
         private System.Windows.Forms.RadioButton rbLarge;
         private System.Windows.Forms.RadioButton rbMedium;
         private System.Windows.Forms.RadioButton rbSmall;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpCrustType;
         private System.Windows.Forms.RadioButton rbThinkCurst;
         private System.Windows.Forms.RadioButton rbThinCurst;
         private System.Windows.Forms.GroupBox gpToppings;
@@ -562,19 +482,13 @@
         private System.Windows.Forms.CheckBox chOnion;
         private System.Windows.Forms.CheckBox chGreenPeppers;
         private System.Windows.Forms.CheckBox chOlives;
-        private System.Windows.Forms.GroupBox gbWhereToEat;
+        private System.Windows.Forms.GroupBox gpWhereToEat;
         private System.Windows.Forms.RadioButton rbTakeOut;
         private System.Windows.Forms.RadioButton rbEatIn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnOrderPizza;
         private System.Windows.Forms.Button btnResetForm;
         private System.Windows.Forms.GroupBox gpSummary;
-        private System.Windows.Forms.Label lblOnion;
-        private System.Windows.Forms.Label lblExtraChess;
-        private System.Windows.Forms.Label lblMashrooms;
-        private System.Windows.Forms.Label lblGreenPeppers;
-        private System.Windows.Forms.Label lblTomatoes;
-        private System.Windows.Forms.Label lblOlives;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblSize;
         private System.Windows.Forms.Label label2;
@@ -583,8 +497,8 @@
         private System.Windows.Forms.Label lblCrustType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblTotalPrice;
-        private System.Windows.Forms.Label lbldollarLogo;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblToppings;
     }
 }
 
